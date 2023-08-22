@@ -23,5 +23,5 @@ jobs:
           docker build -t myimage .
           echo "Code built successfully"  
           docker tag myimage madhupdevops/djangoapp:v2
-          echo "${{ secrets.dockerpass }}" | docker login -u "${{ secrets.dockeruser }}" --password-stdin
+          docker login -u ${{ secrets.dockeruser }} -p ${{ secrets.dockerpass }}
           docker push madhupdevops/djangoapp:v2
