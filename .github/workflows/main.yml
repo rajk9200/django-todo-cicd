@@ -36,5 +36,5 @@ jobs:
       - uses: "docker://madhupdevops/djangoapp:v2"
       - name: Depends Date  
         run: echo "Code Deployed"
-    needs: ["Ubuntu", "Windows", "MacOS"]
+    needs: ["Ubuntu", "Windows", "MacOS"] 
   
